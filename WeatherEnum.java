@@ -40,6 +40,7 @@ public class WeatherEnum {
                 System.out.println("Invalid weather type. Please enter a valid weather type.");
             }
         }
+        
 
         // Suggest clothing or accessories based on the weather type
         String answer = choice.getSuggestion();
