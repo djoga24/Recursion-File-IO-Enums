@@ -10,8 +10,9 @@ public class LoginSystem {
         readUserFile(); // Load existing user data from file
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
-        
+
         while (running) {
+            
             if (loggedIn) {
                 System.out.println("Enter 1 to sign out.");
                 System.out.println("Enter 2 to secure your account!.");
