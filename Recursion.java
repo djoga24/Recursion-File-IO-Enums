@@ -8,6 +8,7 @@ public class Recursion {
         // Get the end value from the user
         int endVal = 0;
         boolean validEndVal = false;
+        
 
         // Exception handling to make sure input is integer
         while (!validEndVal) {
