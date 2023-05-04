@@ -3,6 +3,7 @@ import java.util.*;
 
 public class LoginSystem {
 
+
     static ArrayList<User> userList = new ArrayList<>();
     static boolean loggedIn = false;
 
@@ -12,7 +13,7 @@ public class LoginSystem {
         boolean running = true;
 
         while (running) {
-            
+
             if (loggedIn) {
                 System.out.println("Enter 1 to sign out.");
                 System.out.println("Enter 2 to secure your account!.");
@@ -133,12 +134,13 @@ public class LoginSystem {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 String username = parts[0];
-                String password = parts[1];
+                String password = (parts.length > 1) ? parts[1] : "";
                 User user = new User(username, password);
                 userList.add(user);
             }
             reader.close();
         }
+        
     }
 
     static void writeUserFile() throws IOException {
@@ -154,21 +156,21 @@ public class LoginSystem {
         private String username;
         private String password;
     
-        public User(String username, String password) {
-            this.username = username;
-            this.password = password;
+        public User(String u, String p) {
+            username = u;
+            password = p;
         }
     
         public String getUsername() {
-            return this.username;
+            return username;
         }
     
         public String getPassword() {
-            return this.password;
+            return password;
         }
     
-        public void setPassword(String password) {
-            this.password = password;
+        public void setPassword(String pa) {
+            password = pa;
         }
     }
 
